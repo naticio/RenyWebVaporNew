@@ -1,12 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>#(title)</title>
-</head>
-
-<body>
-  <h1>#(title)</h1>
-</body>
-</html>
+<div class="flex flex-col">
+  # for image in images
+    <div class="flex-1">
+      <div class="flex flex-row">
+        <img src="{{ image.src }}" class="w-full">
+        # if image == images.last
+          </div>
+        </div>
+      # else
+        <img src="{{ image.src }}" class="w-full">
+      # end
+    </div>
+  # end
+</div>
